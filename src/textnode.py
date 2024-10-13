@@ -4,8 +4,13 @@ class TextNode:
         self.text_type = text_type
         self.url = url
 
-    def __eg__(self, other):
-        return self == other
+    def __eq__(self, other):
+        if self.text == other.text:
+            if self.text_type == other.text_type:
+                if self.url == other.url:
+                    return True
+        return False
     
     def __repr__(self):
-        print(f'TextNode({self.text}, {self.text_type}, {self.url})')
+        return f'TextNode({self.text}, {self.text_type}, {self.url})'
+        
