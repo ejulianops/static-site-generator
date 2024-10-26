@@ -5,4 +5,6 @@ def main():
 
     text_node.__repr__()
 
+    print('hello world')
+
 main()
